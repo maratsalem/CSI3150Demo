@@ -12,9 +12,14 @@
       type="image/x-icon"
     />
     <!-- link for css -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style-tutorial.css" />
     <!-- links js. the reason you use ../ is because that takes you back to the 'root' of the current place where the file 
      is located. More .. is one more directory backwards -->
+    <style>
+      /* not reccomended, use external style sheet instead of
+      doing it within the html document  */
+    </style>
+
     <script src="./js/script.js"></script>
   </head>
   <body>
@@ -185,6 +190,53 @@
         <button type="submit">Submit information</button>
         <!-- can also do a reset button  -->
       </form>
+
+      <section class="input-tutorials">
+        <!--tutorial for radio btns present multiple options, but select only one-->
+        <!--the name attribute for all radio buttons should be the same-->
+        <!--the value and id of each button will be different-->
+        <p>Select your favorite pet....</p>
+        <input type="radio" name="pet" id="dogs" value="Dogs" />
+
+        <label for="dogs">Dogs</label>
+        <br />
+        <input type="radio" name="pet" id="cats" value="Cats" />
+
+        <label for="cats">Cats</label>
+        <br />
+        <input type="radio" name="pet" id="birds" value="Birds" />
+
+        <label for="birds">Birds</label>
+        <br />
+        <!--checkboxes allow users to select multiple options presented-->
+        <!--name, value, and id for checkboxes will ALL be different-->
+
+        <p>Select from the following programming languages....</p>
+        <input type="checkbox" name="java" id="java" value="java" />
+        <label for="dogs">Java</label>
+
+        <br />
+        <input type="checkbox" name="python" id="python" value="python" />
+        <label for="cats">Python</label>
+
+        <br />
+        <input type="checkbox" name="c" id="c" value="c" />
+        <label for="birds">C</label>
+        <hr />
+        <br />
+
+        <!--select from multiple option input type-->
+        <!-- select and option -->
+        <!-- drop down menus! -->
+
+        <label for="states">Choose your midwest state</label>
+        <select name="states" id="states">
+          <option value="">Select a state</option>
+          <option value="MI">Michigan</option>
+          <option value="OH">Ohio</option>
+          <option value="IL">Illinois</option>
+        </select>
+      </section>
     </main>
     <footer><br />Footer Content</footer>
   </body>
