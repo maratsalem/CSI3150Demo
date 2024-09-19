@@ -5,3 +5,11 @@
 body {
   background-color: lightblue;
 }
+
+#primary-heading {
+  color: purple;
+}
+
+.heading-group {
+  font-family: sans-serif;
+}
