@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--contains all metadata, this is where outside files (CSS, JS, API CDN links should be contained)-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo Page</title>
+    <!-- link for webiste icon image at top of the page -->
+    <link
+      rel="shortcut icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaaIhi6tdNnA4B__uyghXaNlA8HSSfpZihIg&s"
+      type="image/x-icon"
+    />
+    <!-- link for css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- links js. the reason you use ../ is because that takes you back to the 'root' of the current place where the file 
+     is located. More .. is one more directory backwards -->
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <!-- this is a comment in html 5 -->
+      <!-- Division of the title -->
+      <div>
+        <h1>Title</h1>
+        <h2>This is my subtitle</h2>
+      </div>
+      <!-- navigation menu -->
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#menu-item-about">About</a></li>
+          <li><a href="./html/semantic-html-example.html">Products</a></li>
+          <li>Contact Us</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Division of the overview paragraph -->
+      <div>
+        <h3>Overview</h3>
+        <span>This is a statement inside an inline tag </span>
+        <span>This is a second statement inside an inline tag</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, vitae
+          distinctio, sapiente maiores et aliquam quaerat architecto maxime sit
+          ea est deserunt nam nisi, corrupti autem quia suscipit illo ullam.
+        </p>
+      </div>
+      <!-- Division for significance paragraph -->
+      <div class="container-element">
+        <h3>Significance</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque
+          quisquam unde inventore pariatur voluptatibus consequatur alias at
+          repellat illum eos accusamus, ratione similique officia hic voluptatem
+          vel eius expedita. A.
+        </p>
+      </div>
+
+      <!-- image embedding, hyperreferencing, lists, multimedia files, table data-->
+      <!-- html attributes; id, class, src, href, alt -->
+      <div>
+        <!-- insert image in html document, this image is contained within an asset -->
+        <img
+          src="./assets/img/20240712_202636.jpg"
+          width="500px"
+          height="650px"
+          alt="A photo of a dog outside. The dog is brown and white, and has slightly shaggy hair."
+        />
+        <!-- insert image in html document, this image is found online and referenced through a link. Using % resolves the size
+       relative to the page instead of a set amount of pixels -->
+        <img
+          src="https://images.pexels.com/photos/406014/pexels-photo-406014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+          width="100%"
+          height="100%"
+          alt="This is an image of a dog from the nose up, whose face is pointing up."
+        />
+
+        <hr />
+        <br />
+        <!-- example of an ordered list -->
+        <ol>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ol>
+
+        <br />
+        <hr />
+
+        <!-- example of an unordered list -->
+        <!-- About menu item should navigate to this unordered list -->
+        <ul id="menu-item-about">
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+
+        <!-- hyperrefrencing using anchor, can refer to another website, etc -->
+        <a href="http://www.oakland.edu">Click here</a>
+        <span> to visit Oakland University homepage.</span>
+        <a href="mailto:sen@oakland.edu">Email Prof Sen</a>
+      </div>
+
+      <hr />
+      <br />
+
+      <!--multimedia files, audio and video-->
+
+      <audio src="./assets/audio/001 - Fire Emblem Theme.mp3" controls>
+        Your browser does not support the audio format.
+        <!-- using multiple source to change video resolution/preferences for user hardware-->
+        <!-- <source src="" type="" ></source> -->
+      </audio>
+
+      <video
+        controls
+        src="./assets/video/file_example_MOV_1280_1_4MB.mov"
+        width="200"
+        height="200"
+      >
+        Your browser does not support the video format.
+      </video>
+      <br />
+
+      <!-- to create tabular content-->
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>gpa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>John</td>
+            <td>Wick</td>
+            <td>3.79</td>
+          </tr>
+          <tr>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>3.89</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Avg Gpa</td>
+            <td></td>
+            <td>3.84</td>
+          </tr>
+        </tfoot>
+      </table>
+      <br />
+      <!-- getting input from users: IMPORTANT!!!!!!-->
+      <!-- html forms > input fields (buttons, check buttons, wrap inputs inside a form and send to server)-->
+
+      <!--form element -->
+      <form action="#" method="get">
+        <!-- fields to take input -->
+        <label for="user-email">Enter your Email: </label>
+        <input
+          placeholder="abc@email.com"
+          type="email"
+          name="user-email"
+          id="user-email"
+        />
+        <br />
+        <label for="user-password">Enter your password: </label>
+        <input type="password" name="user-password" id="user-password" />
+        <br />
+        <input
+          type="checkbox"
+          name="test-checkbox"
+          value="Coffee"
+          id="test-checkbox"
+        />
+
+        <label for="test-checkbox">Coffee</label>
+        <br />
+        <button type="submit">Submit information</button>
+        <!-- can also do a reset button  -->
+      </form>
+    </main>
+    <footer><br />Footer Content</footer>
+  </body>
+</html>
