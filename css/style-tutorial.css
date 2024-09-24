@@ -8,8 +8,18 @@ body {
 
 #primary-heading {
   color: purple;
+  border: 2px solid purple;
+  border-radius: 5px;
+  padding: 15px;
+  /*use padding for space between border*/
+  margin: 50px;
+  /*use margin for space between 'containers'/'boxes'/'corners' on/of pages */
 }
 
 .heading-group {
   font-family: sans-serif;
+}
+
+* {
+  margin: 5;
 }
